@@ -1,0 +1,17 @@
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.exe
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.deps.json
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.runtimeconfig.json
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.runtimeconfig.dev.json
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.dll
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\bin\Debug\net5.0-windows\visualizarRetasGrafico.pdb
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.Form1.resources
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.csproj.GenerateResource.cache
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.AssemblyInfoInputs.cache
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.AssemblyInfo.cs
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.csproj.CoreCompileInputs.cache
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.dll
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\refint\visualizarRetasGrafico.dll
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.pdb
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\visualizarRetasGrafico.genruntimeconfig.cache
+C:\Users\heito\OneDrive\Desktop\visualizarRetasGrafico\visualizarRetasGrafico\obj\Debug\net5.0-windows\ref\visualizarRetasGrafico.dll
