@@ -211,24 +211,8 @@ namespace visualizarRetasGrafico
             if(clickBtn == 1)
             {
                 desenharRetas(e);
-                clickBtn = 0;
+                clickBtn = 0;          
             }
-            else if(clickBtn == 2)
-            {
-                desenharRetas(e);
-                clickBtn = 0;
-            }
-            else if (clickBtn == 3)
-            {
-                clickBtn = 0;
-            }
-            else if (clickBtn == 4)
-            {
-                clickBtn = 0;
-                desenharRetas(e);
-            }
-
-
         }
 
         private void criarRetaBtn_Click(object sender, EventArgs e)
@@ -278,7 +262,7 @@ namespace visualizarRetasGrafico
                 if (index != -1)
                 {
                     listaRetas.Items.RemoveAt(index);
-                    clickBtn = 2;
+                    clickBtn = 1;
                     messageStatus("Reta Deletada", false);
                     Refresh();
                 }
@@ -327,13 +311,11 @@ namespace visualizarRetasGrafico
         }
         private void salvarImagemBtn_Click(object sender, EventArgs e)
         {
-            clickBtn = 3;
             criarArquivo();
         }
 
         private void resetarPlanoBtn_Click(object sender, EventArgs e)
         {
-            clickBtn = 4;
             listaRetas.Items.Clear();
             messageStatus("Plano Cartesiano Limpo", true);
             Refresh();

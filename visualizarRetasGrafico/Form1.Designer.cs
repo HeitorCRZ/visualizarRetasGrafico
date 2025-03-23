@@ -203,7 +203,7 @@
             // 
             // roxoBtn
             // 
-            roxoBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            roxoBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             roxoBtn.AutoSize = true;
             roxoBtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             roxoBtn.ForeColor = System.Drawing.Color.DarkViolet;
@@ -217,7 +217,7 @@
             // 
             // marromBtn
             // 
-            marromBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            marromBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             marromBtn.AutoSize = true;
             marromBtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             marromBtn.ForeColor = System.Drawing.Color.Sienna;
@@ -231,7 +231,7 @@
             // 
             // amareloBtn
             // 
-            amareloBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            amareloBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             amareloBtn.AutoSize = true;
             amareloBtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             amareloBtn.ForeColor = System.Drawing.Color.Yellow;
@@ -421,8 +421,8 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             BackColor = System.Drawing.SystemColors.ControlLightLight;
             ClientSize = new System.Drawing.Size(1354, 661);
             Controls.Add(deleteLabel);

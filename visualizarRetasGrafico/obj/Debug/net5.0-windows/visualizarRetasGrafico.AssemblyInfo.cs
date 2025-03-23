@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("visualizarRetasGrafico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0f8e4961bc6113b1a2fe0e0418667e661426903")]
 [assembly: System.Reflection.AssemblyProductAttribute("visualizarRetasGrafico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("visualizarRetasGrafico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
