@@ -34,7 +34,7 @@
             interceptoLabel = new System.Windows.Forms.Label();
             interceptoBox = new System.Windows.Forms.TextBox();
             intervaloLabel = new System.Windows.Forms.Label();
-            intervaloBox = new System.Windows.Forms.TextBox();
+            intervalosBox = new System.Windows.Forms.TextBox();
             verdeBtn = new System.Windows.Forms.RadioButton();
             cinzaBtn = new System.Windows.Forms.RadioButton();
             laranjaBtn = new System.Windows.Forms.RadioButton();
@@ -63,7 +63,7 @@
             // inclinacaoBox
             // 
             inclinacaoBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            inclinacaoBox.Location = new System.Drawing.Point(307, 97);
+            inclinacaoBox.Location = new System.Drawing.Point(330, 96);
             inclinacaoBox.Name = "inclinacaoBox";
             inclinacaoBox.Size = new System.Drawing.Size(75, 23);
             inclinacaoBox.TabIndex = 0;
@@ -107,7 +107,7 @@
             // interceptoBox
             // 
             interceptoBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            interceptoBox.Location = new System.Drawing.Point(307, 139);
+            interceptoBox.Location = new System.Drawing.Point(330, 139);
             interceptoBox.Name = "interceptoBox";
             interceptoBox.Size = new System.Drawing.Size(75, 23);
             interceptoBox.TabIndex = 4;
@@ -117,19 +117,19 @@
             intervaloLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             intervaloLabel.AutoSize = true;
             intervaloLabel.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            intervaloLabel.Location = new System.Drawing.Point(12, 172);
+            intervaloLabel.Location = new System.Drawing.Point(12, 178);
             intervaloLabel.Name = "intervaloLabel";
-            intervaloLabel.Size = new System.Drawing.Size(272, 45);
+            intervaloLabel.Size = new System.Drawing.Size(312, 45);
             intervaloLabel.TabIndex = 7;
-            intervaloLabel.Text = "Defina o valor do intervalo(x):";
+            intervaloLabel.Text = "Defina os valores dos intervalos(x):";
             // 
-            // intervaloBox
+            // intervalosBox
             // 
-            intervaloBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            intervaloBox.Location = new System.Drawing.Point(307, 186);
-            intervaloBox.Name = "intervaloBox";
-            intervaloBox.Size = new System.Drawing.Size(75, 23);
-            intervaloBox.TabIndex = 6;
+            intervalosBox.Location = new System.Drawing.Point(330, 184);
+            intervalosBox.Multiline = true;
+            intervalosBox.Name = "intervalosBox";
+            intervalosBox.Size = new System.Drawing.Size(75, 37);
+            intervalosBox.TabIndex = 6;
             // 
             // verdeBtn
             // 
@@ -257,9 +257,9 @@
             // 
             listaRetas.FormattingEnabled = true;
             listaRetas.ItemHeight = 15;
-            listaRetas.Location = new System.Drawing.Point(1001, 94);
+            listaRetas.Location = new System.Drawing.Point(961, 94);
             listaRetas.Name = "listaRetas";
-            listaRetas.Size = new System.Drawing.Size(341, 184);
+            listaRetas.Size = new System.Drawing.Size(381, 184);
             listaRetas.TabIndex = 17;
             // 
             // listaLabel
@@ -394,10 +394,10 @@
             // 
             messageLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             messageLabel.AutoSize = true;
-            messageLabel.Font = new System.Drawing.Font("Gabriola", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            messageLabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             messageLabel.Location = new System.Drawing.Point(12, 710);
             messageLabel.Name = "messageLabel";
-            messageLabel.Size = new System.Drawing.Size(0, 40);
+            messageLabel.Size = new System.Drawing.Size(0, 25);
             messageLabel.TabIndex = 29;
             // 
             // deletarBox
@@ -449,13 +449,13 @@
             Controls.Add(cinzaBtn);
             Controls.Add(verdeBtn);
             Controls.Add(intervaloLabel);
-            Controls.Add(intervaloBox);
+            Controls.Add(intervalosBox);
             Controls.Add(interceptoLabel);
             Controls.Add(interceptoBox);
             Controls.Add(azulBtn);
             Controls.Add(inclinacaoLabel);
             Controls.Add(inclinacaoBox);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -475,7 +475,7 @@
         private System.Windows.Forms.Label interceptoLabel;
         private System.Windows.Forms.TextBox interceptoBox;
         private System.Windows.Forms.Label intervaloLabel;
-        private System.Windows.Forms.TextBox intervaloBox;
+        private System.Windows.Forms.TextBox intervalosBox;
         private System.Windows.Forms.RadioButton verdeBtn;
         private System.Windows.Forms.RadioButton cinzaBtn;
         private System.Windows.Forms.RadioButton laranjaBtn;

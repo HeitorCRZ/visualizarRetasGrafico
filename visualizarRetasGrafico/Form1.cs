@@ -18,6 +18,14 @@ namespace visualizarRetasGrafico
         int numeroReta = 1;
         int clickBtn = 0;
         Color cor;
+
+        int pontoYGraficoRetaX = 550;
+        int pontoInicialGraficoRetaX = 130;
+        int pontoFinalGraficoRetaX = 760;
+
+        int pontoXGraficoRetaY = 445;
+        int pontoInicialGraficoRetaY = 320;
+        int pontoFinalGraficoRetaY = 670;
         public void iniciarCor(int r, int g, int b)
         {
             cor = Color.FromArgb(255, r, g, b);
@@ -33,20 +41,20 @@ namespace visualizarRetasGrafico
             e.Graphics.DrawLine(caneta, x1, y1, x2, y2);
         }
 
-        public void desenharPlanoPequeno(PaintEventArgs e)
+        public void desenharGrafico(PaintEventArgs e)
         {
-            desenharLinha(e, 130, 550, 760, 550, 1);
-            desenharLinha(e, 445, 320, 445, 670, 1);
+            desenharLinha(e, pontoInicialGraficoRetaX, pontoYGraficoRetaX, pontoFinalGraficoRetaX, pontoYGraficoRetaX, 1);
+            desenharLinha(e, pontoXGraficoRetaY, pontoInicialGraficoRetaY, pontoXGraficoRetaY, pontoFinalGraficoRetaY, 1);
             desenharSetasPlanoPequeno(e);
             desenharTracejadoPlanoPequeno(e);
         }
         public void desenharSetasPlanoPequeno(PaintEventArgs e)
         {
-            desenharLinha(e, 765, 550, 755, 545, 1);
-            desenharLinha(e, 765, 550, 755, 555, 1);
+            desenharLinha(e, pontoFinalGraficoRetaX + 5, pontoYGraficoRetaX, pontoFinalGraficoRetaX - 5, pontoYGraficoRetaX - 5, 1);
+            desenharLinha(e, pontoFinalGraficoRetaX + 5, pontoYGraficoRetaX, pontoFinalGraficoRetaX - 5, pontoYGraficoRetaX + 5, 1);
 
-            desenharLinha(e, 445, 315, 440, 325, 1);
-            desenharLinha(e, 445, 315, 450, 325, 1);
+            desenharLinha(e, pontoXGraficoRetaY, pontoInicialGraficoRetaY - 5, pontoXGraficoRetaY - 5, pontoInicialGraficoRetaY + 5, 1);
+            desenharLinha(e, pontoXGraficoRetaY, pontoInicialGraficoRetaY - 5, pontoXGraficoRetaY + 5, pontoInicialGraficoRetaY + 5, 1);
         }
 
         public void desenharTracejadoPlanoPequeno(PaintEventArgs e)
@@ -54,12 +62,12 @@ namespace visualizarRetasGrafico
             for (int i = 0; i < 126; i++)
             {
                 int x = 5 * i;
-                desenharLinha(e, 130 + x, 549, 130 + x, 551, 1);
+                desenharLinha(e, pontoInicialGraficoRetaX + x, pontoYGraficoRetaX - 1, pontoInicialGraficoRetaX + x, pontoYGraficoRetaX + 1, 1);
             }
             for (int i = 0; i < 70; i++)
             {
                 int x = 5 * i;
-                desenharLinha(e, 444, 325 + x, 446, 325 + x, 1);
+                desenharLinha(e, pontoXGraficoRetaY - 1, pontoInicialGraficoRetaY + x, pontoXGraficoRetaY + 1, pontoInicialGraficoRetaY + x, 1);
             }
         }
 
@@ -69,57 +77,30 @@ namespace visualizarRetasGrafico
             desenharLinha(e, 0, 250, 930, 250, 1); // Linha Horizontal Superior
             desenharLinha(e, 930, 320, 1400, 320, 1); // Linha Horizontal Inferior
             desenharLinha(e, 930, 0, 930, 800, 1); // Linha Vertical
-            desenharPlanoPequeno(e);
+            desenharGrafico(e);
         }
-        public void desenharRetas(PaintEventArgs e)
+        public void desenharRetasGrafico(PaintEventArgs e)
         {
            
             for (int i = 0; i < listaRetas.Items.Count; i++)
             {
                 string itemSelecionado = listaRetas.Items[i].ToString();
-                string[] partes = itemSelecionado.Split(new char[] { '=', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] partes = itemSelecionado.Split(new char[] { '=', ';' });
 
-                int intervalo = int.Parse(partes[1].Trim());
-                int inclinacao = int.Parse(partes[3].Trim());
-                int intercepto = int.Parse(partes[5].Trim());
-                int numeroCor = int.Parse(partes[7].Trim());
+                int x1 = int.Parse(partes[1]);
+                int y1 = int.Parse(partes[3]);
+                int x2 = int.Parse(partes[5]);
+                int y2 = int.Parse(partes[7]);
+                int inclinacao = int.Parse(partes[9]);
+                int intercepto = int.Parse(partes[11]);
+                int numeroCor = int.Parse(partes[13]);
+           
 
                 acharCorReta(numeroCor);
-                int pontoXinicial = calcularEixoX(inclinacao, intercepto, -120);
-                int pontoXfinal = calcularEixoX(inclinacao, intercepto, 230);
-
-                if (pontoXinicial < -315)
-                    pontoXinicial = -315;
-                if (pontoXfinal > 315)
-                    pontoXfinal = 315;
-
-                if (inclinacao == 0)
-                    desenharLinha(e, 130, 550 - intercepto, 760, 550 - intercepto, 2);
-                else
-                    desenharLinha(e, 445 + pontoXinicial, 550 + 120, 445 + pontoXfinal, 320, 2);
-
-                desenharPontoXYreta(e, inclinacao, intercepto, intervalo);
-               
-
+                desenharLinha(e, pontoXGraficoRetaY + x1, pontoYGraficoRetaX - y1, pontoXGraficoRetaY + x2, pontoYGraficoRetaX - y2,2);
             }
         }
-        public void desenharPontoXYreta(PaintEventArgs e, int inclinacao, int intercepto, int intervalo)
-        {
-            int y = calcularEixoY(inclinacao, intercepto, intervalo);
-            iniciarCor(255, 0, 0);
-            desenharLinha(e, 444 + intervalo, 550 - y, 446 + intervalo, 550 - y, 8);
-            desenharLinha(e, 445, 551 - intercepto, 445, 549 - intercepto, 8);
-            
-        }
-        public int calcularEixoX(int m, int b, int y)
-        {
-            if (m == 0)
-                return 0;
-            float valorX = (-b + y) / m;
-            int xArredondado = (int)Math.Round(valorX);
-
-            return xArredondado;
-        }
+       
 
         public int calcularEixoY(int m, int b, int x)
         {
@@ -172,9 +153,13 @@ namespace visualizarRetasGrafico
                 return false;
             }
 
-            if (!int.TryParse(inclinacaoBox.Text, out int inclinacao) ||
+            string[] linhas = intervalosBox.Lines;
+
+            if (linhas.Length < 2 ||
+                !int.TryParse(inclinacaoBox.Text, out int inclinacao) ||
                 !int.TryParse(interceptoBox.Text, out int intercepto) ||
-                !int.TryParse(intervaloBox.Text, out int intervalo))
+                !int.TryParse(linhas[0], out int intervalo1) ||
+                !int.TryParse(linhas[1], out int intervalo2))
             {
                 messageStatus("Valores inválidos. Certifique-se de que todos os campos contêm números inteiros.", false);
                 return false;
@@ -210,7 +195,7 @@ namespace visualizarRetasGrafico
             desenharFront(e);
             if(clickBtn == 1)
             {
-                desenharRetas(e);
+                desenharRetasGrafico(e);
                 clickBtn = 0;          
             }
         }
@@ -222,20 +207,24 @@ namespace visualizarRetasGrafico
             {
                 int inclinacao = int.Parse(inclinacaoBox.Text);
                 int intercepto = int.Parse(interceptoBox.Text);
-                int intervalo = int.Parse(intervaloBox.Text);
+                string[] linhas = intervalosBox.Lines;
+                int intervalo1 = int.Parse(linhas[0]);
+                int intervalo2 = int.Parse(linhas[1]);
 
-                int y = calcularEixoY(inclinacao, intercepto, intervalo);
-                if (intervalo <= 315 && intervalo >= -315 && y <= 230 && y >= -120)
+                int y1 = calcularEixoY(inclinacao, intercepto, intervalo1);
+                int y2 = calcularEixoY(inclinacao, intercepto, intervalo2);
+                if ( (intervalo1 <= 315 && intervalo1 >= -315 && y1 <= 230 && y1 >= -120) ||
+                     (intervalo1 <= 315 && intervalo1 >= -315 && y1 <= 230 && y1 >= -120) )
                 {
                     int numeroCor = acharCorReta(0);
-                    listaRetas.Items.Add("Reta(" + numeroReta + ") ---> x = " + intervalo + "; m = " + inclinacao + "; b = " + intercepto + "; Numero da cor = " + numeroCor);
+                    listaRetas.Items.Add("Reta(" + numeroReta + ")->x1=" + intervalo1 + ";y1= " + y1 + ";x2=" + intervalo2 + ";y2=" + y2 + ";m=" + inclinacao + ";b=" + intercepto + ";Numero da cor = " + numeroCor);
                     numeroReta++;
                     clickBtn = 1;
                     messageStatus("Reta Criada", true);
                     Refresh();
                 }
                 else
-                    messageStatus("Valor fora da escala do Plano. X(" + intervalo + ") e Y(" + y + ").", false);
+                    messageStatus("Valor fora da escala do Plano. X1(" + intervalo1 + ") e Y1(" + y1 + ") / X2(" + intervalo2 + ") e Y2(" + y2 + ") .", false);
 
             }
             
@@ -288,24 +277,21 @@ namespace visualizarRetasGrafico
         public string pegarDadosArquivo()
         {
             string dados = "";
-            foreach (var item in listaRetas.Items)
-            {
-                string itemSelecionado = item.ToString();
-                string[] partes = itemSelecionado.Split(new char[] { '=', ';' }, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < listaRetas.Items.Count; i++){
 
-                int intervalo = int.Parse(partes[1].Trim());
-                int inclinacao = int.Parse(partes[3].Trim());
-                int intercepto = int.Parse(partes[5].Trim());
-                int y = calcularEixoY(inclinacao, intercepto, intervalo);
-                if (inclinacao == 0)
-                    dados += "f(" + intervalo + ") = " + inclinacao + "." + intervalo + "+" + intercepto + " ----> IM(f) = [" + y + "]\n";
-                else if(intercepto>y)
-                    dados += "f(" + intervalo + ") = " + inclinacao + "." + intervalo + "+" + intercepto + " ----> IM(f) = [" + y + "," + intercepto + "]\n";
+                string itemSelecionado = listaRetas.Items[i].ToString();
+                string[] partes = itemSelecionado.Split(new char[] { '=', ';' });
+
+                int y1 = int.Parse(partes[3]);
+                int y2 = int.Parse(partes[7]);
+               
+               
+                if (y1 > y2)
+                    dados += "IM(f) = [" + y2 +","+ y1 +"]\n";
+                else if (y2 > y1)
+                    dados += "IM(f) = [" + y1 + "," + y2 + "]\n";
                 else
-                    dados += "f(" + intervalo + ") = " + inclinacao + "." + intervalo + "+" + intercepto + " ----> IM(f) = [" + intercepto + "," + y + "]\n";
-
-
-
+                    dados += "IM(f) = [" + y1 + "]\n";
             }
             return dados;
         }
